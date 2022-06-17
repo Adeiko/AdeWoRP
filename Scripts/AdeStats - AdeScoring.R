@@ -1,5 +1,5 @@
 source("Scripts/DevLibraries.r")
-load("Data/AdeStats.rda")
+# load("Data/AdeStats.rda")
 load("Data/ADPData.rda")
 load("Data/Rosters_headshots.rda")
 load("Data/Teams_color.rda")
@@ -16,9 +16,9 @@ WoRP_SingleYear = 2021
 # Define the Scoring of the league
 ScoringValues <- c(
   "Pass_Yards"=0.04,
-  "Pass_TD"=4,
-  "Pass_INT"=-1,
-  "Pass_Sack"=0,
+  "Pass_TD"=6,
+  "Pass_INT"=-2,
+  "Pass_Sack"=-1,
   "Pass_Inc"=0,
   "Pass_Comp"=0,
   "Pass_FD"=0,
@@ -29,7 +29,7 @@ ScoringValues <- c(
   "Rec_QB"=1,
   "Rec_RB"=1,
   "Rec_WR"=1,
-  "Rec_TE"=1,
+  "Rec_TE"=1.5,
   "Rec_Yards"=0.1,
   "Rec_TD"=6,
   "Rec_FD"=0,
@@ -41,14 +41,20 @@ ScoringValues <- c(
 # Define the Roster Spots
 RP <- c(
   "TM"=12,
-  "QB"=1,
+  "QB"=2,
   "RB"=2,
   "WR"=2,
   "TE"=1,
-  "FLEX"=1
+  "FLEX"=3
 )
 
-source("Scripts/AdeStats - AdeScoring creator.r")
+# source("Scripts/AdeStats - AdeScoring creator.r")
+# source("Scripts/AdeStats - AdeScoring creator StartRate.r")
+source("Scripts/AdeStats - AdeScoring creator Projections.R")
+
+
 source("Scripts/AdeStats - AdeScoring Graphs.r")
 source("Scripts/AdeStats - AdeScoring ADP.r")
+
 source("Scripts/AdeStats - AdeScoring Tables.r")
+

@@ -20,8 +20,13 @@ library(ggpmisc) # Mism data
 library(tictoc) # timer to calcualte runtime
 library(ggpubr) # Merge plots into one
 library(gridtext) # To use richtext
+# library(rjson) # To parse json
+library(jsonlite) # To Parse Json
 
 options(dplyr.summarise.inform = FALSE)
 options(scipen = 9999)
 options(digits=2)
 options(nflreadr.verbose = FALSE)
+# library(tomtom) #custom jthomasmock functions (https://jthomasmock.github.io/)
+# install.packages(c("tidyverse","gt","DT","ggthemes","gtExtras","ggtext","teamcolors","ggforce","ggridges","ggrepel","ggbeeswarm","extrafont","lubridate","dplyr","RCurl","tictoc"))
+# remotes::install_github("jthomasmock/tomtom")
