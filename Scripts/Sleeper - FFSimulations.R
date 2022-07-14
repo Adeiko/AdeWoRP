@@ -1,15 +1,15 @@
 # IF ITS THE FIRST TIME UNCOMMENT AND INSTALL THE PACKAGES
 
-# install.packages(c("ffsimulator","ggplot2","ffscrapr","dplyr","tidyr","ggridges"))
+install.packages(c("ffsimulator","ggplot2","ffscrapr","dplyr","tidyr","ggridges"))
 
 library(ffsimulator)
 library(ggplot2)
 library(ggridges)
 library(ffscrapr)
 
-S_Username = "Adeiko";
+S_Username = "XXX";
 S_Season = 2022;
-S_Simulations = 100;
+S_Simulations = 25;
 
 leaguelist <- sleeper_userleagues(S_Username,2022);
 dir.create(file.path(getwd(),"Simulations"), showWarnings = FALSE);
