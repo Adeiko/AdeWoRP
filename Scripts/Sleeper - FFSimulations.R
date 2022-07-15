@@ -41,9 +41,9 @@ SimLeague <- function(LeagueID,LeagueName,LeagueSeason,LeagueSimulations){
     F_conn<-sleeper_connect(season=LeagueSeason,league_id=LeagueID);
   }
   F_sim<-ff_simulate(conn=F_conn,n_seasons=LeagueSimulations);
-  ggplot2::ggsave(plot=autoplot(F_sim,type="wins"),filename=paste0("Simulations/",LeagueName,"_Wins_",as.numeric(Sys.time()),".jpg"),dpi = "retina");
-  ggplot2::ggsave(plot=autoplot(F_sim,type="points"),filename=paste0("Simulations/",LeagueName,"_Points_",as.numeric(Sys.time()),".jpg"),dpi = "retina");
-  ggplot2::ggsave(plot=autoplot(F_sim,type="rank"),filename=paste0("Simulations/",LeagueName,"_Rank_",as.numeric(Sys.time()),".jpg"),dpi = "retina");
+  ggplot2::ggsave(plot=autoplot(F_sim,type="wins"),filename=paste0("Simulations/",strftime(Sys.time(),format = "%y%m%d"),"_",LeagueName,"_Wins.jpg"),dpi = "retina");
+  ggplot2::ggsave(plot=autoplot(F_sim,type="points"),filename=paste0("Simulations/",strftime(Sys.time(),format = "%y%m%d"),"_",LeagueName,"_Wins.jpg"),dpi = "retina");
+  ggplot2::ggsave(plot=autoplot(F_sim,type="rank"),filename=paste0("Simulations/",strftime(Sys.time(),format = "%y%m%d"),"_",LeagueName,"_Wins.jpg"),dpi = "retina");
 }
 
 # PLOT ALL LEAGUES BY DEFAULT
