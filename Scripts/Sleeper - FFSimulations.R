@@ -42,8 +42,8 @@ SimLeague <- function(LeagueID,LeagueName,LeagueSeason,LeagueSimulations){
   }
   F_sim<-ff_simulate(conn=F_conn,n_seasons=LeagueSimulations);
   ggplot2::ggsave(plot=autoplot(F_sim,type="wins"),filename=paste0("Simulations/",strftime(Sys.time(),format = "%y%m%d"),"_",LeagueName,"_Wins.jpg"),dpi = "retina");
-  ggplot2::ggsave(plot=autoplot(F_sim,type="points"),filename=paste0("Simulations/",strftime(Sys.time(),format = "%y%m%d"),"_",LeagueName,"_Wins.jpg"),dpi = "retina");
-  ggplot2::ggsave(plot=autoplot(F_sim,type="rank"),filename=paste0("Simulations/",strftime(Sys.time(),format = "%y%m%d"),"_",LeagueName,"_Wins.jpg"),dpi = "retina");
+  ggplot2::ggsave(plot=autoplot(F_sim,type="points"),filename=paste0("Simulations/",strftime(Sys.time(),format = "%y%m%d"),"_",LeagueName,"_Points.jpg"),dpi = "retina");
+  ggplot2::ggsave(plot=autoplot(F_sim,type="rank"),filename=paste0("Simulations/",strftime(Sys.time(),format = "%y%m%d"),"_",LeagueName,"_Rank.jpg"),dpi = "retina");
 }
 
 # PLOT ALL LEAGUES BY DEFAULT
